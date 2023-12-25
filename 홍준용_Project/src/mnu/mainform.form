@@ -73,6 +73,7 @@
         <Property name="text" type="java.lang.String" value="&#xb85c;&#xadf8;&#xc778;"/>
       </Properties>
       <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="but_login"/>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="but_loginActionPerformed"/>
       </Events>
     </Component>
@@ -80,6 +81,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="&#xbc18;&#xb824;&#xb3d9;&#xbb3c;&#xb4f1;&#xb85d;"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="but_regis"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>

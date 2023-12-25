@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package 홍준용project;
+package mnu;
 
 /**
  *
@@ -11,6 +11,9 @@ package 홍준용project;
  */
 public class mainform extends javax.swing.JFrame {
 
+    user_sign_form signobj;
+    user_join_form joinobj;
+    registrationform regisobj;
     /**
      * Creates new form mainform
      */
@@ -47,6 +50,11 @@ public class mainform extends javax.swing.JFrame {
         });
 
         but_login.setText("로그인");
+        but_login.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                but_login(evt);
+            }
+        });
         but_login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 but_loginActionPerformed(evt);
@@ -54,6 +62,11 @@ public class mainform extends javax.swing.JFrame {
         });
 
         but_regis.setText("반려동물등록");
+        but_regis.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                but_regis(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("굴림", 0, 18)); // NOI18N
         jLabel1.setText("반려동물 원격진료");
@@ -101,8 +114,28 @@ public class mainform extends javax.swing.JFrame {
     }//GEN-LAST:event_but_loginActionPerformed
 
     private void but_user_sign(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_but_user_sign
-        // TODO add your handling code here:
+    if (signobj == null) {
+        signobj = new user_sign_form();
+    }
+    signobj.setVisible(true);
+
     }//GEN-LAST:event_but_user_sign
+
+    private void but_login(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_but_login
+        // TODO add your handling code here:
+            if (joinobj == null) {
+        joinobj = new user_join_form();
+    }
+    joinobj.setVisible(true);
+    }//GEN-LAST:event_but_login
+
+    private void but_regis(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_but_regis
+        // TODO add your handling code here:
+                 if (regisobj == null) {
+        regisobj = new registrationform();
+    }
+    regisobj.setVisible(true);
+    }//GEN-LAST:event_but_regis
 
     /**
      * @param args the command line arguments
@@ -129,6 +162,12 @@ public class mainform extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(mainform.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
